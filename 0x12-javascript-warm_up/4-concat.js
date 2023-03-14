@@ -1,5 +1,7 @@
 #!/usr/bin/node
-const argv0 = process.argv[2];
-const argv1 = process.argv[3];
+const argv = require('process').argv;
 
-console.log(`${argv0} is ${argv1}`);
+const arg1 = argv[2] ? argv[2] : 'undefined';
+const arg2 = argv[3] ? argv[3] : 'undefined';
+
+console.log(arg1.concat(' is ', arg2));
